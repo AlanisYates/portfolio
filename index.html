@@ -29,7 +29,10 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-      <div class="main">
+      <section class="main">
+        <!-- <div class="circle"></div>
+        <div class="circle2"></div> -->
+        <!-- <div class="circle2"></div> -->
         <div class="main-content">
           <h1 class="name bold">ALANIS YATES</h1>
           <h2 class="med">FULL STACK DEVELOPER</h2>
@@ -38,7 +41,7 @@
             <button type="button" class="button">RESUME</button>
           </h2>
         </div>
-      </div>
+      </section>
     </div>
     <section id="skills">
       <div class="blank"></div>
@@ -110,5 +113,19 @@
         <h1>PROJECTS</h1>
       </div>
     </section>
+
+    <script src="node_modules/lax.js/lib/lax.min.js"></script>
+    <script>
+      window.onload = function() {
+        lax.setup(); // init
+        document.addEventListener(
+          "scroll",
+          function(e) {
+            lax.update(window.scrollY); // update every scroll
+          },
+          false
+        );
+      };
+    </script>
   </body>
 </html>

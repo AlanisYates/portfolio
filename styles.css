@@ -9,6 +9,7 @@ body {
   background: #111d5e;
 }
 
+
 .bold {
   font-weight: 700;
 }
@@ -65,7 +66,6 @@ body {
 
 .topnav a {
   float: left;
-
   display: block;
   color: white;
   text-align: center;
@@ -87,6 +87,31 @@ body {
   display: none;
 }
 
+.circle {
+  display: block;
+  position: absolute;
+  background: #ffbd69;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  margin: 0;
+  transform: translate(-800px, 60vh);
+  /* overflow-x: hidden; */
+  z-index: -1;
+}
+.circle2 {
+  display: block;
+  position: absolute;
+  background: #7e7972;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  margin: 0;
+  transform: translate(, -40vh);
+  overflow-x: hidden;
+  z-index: -1;
+}
+
 .main {
   grid-column: 2 / 12;
   grid-row: 2 / -1;
@@ -94,6 +119,7 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .main-content {
@@ -138,18 +164,20 @@ body {
 /* skills ------------------------------------------------- */
 
 #skills {
+  background: #111d5e;
   height: 100vh;
   width: 100vw;
   color: white;
   /* background-color: ; */
+  /* overflow: hidden; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
 
 .blank {
-    grid-column: 1 / -1;
-    grid-row: 1 / 1;
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
 }
 
 .title {
@@ -164,33 +192,32 @@ body {
 }
 
 .tech {
-    grid-column: 2/ 6;
-    grid-row: 4 / -1;
-    /* background: silver; */
-    text-align: left;
-    justify-content: center;
-    align-items: center;
+  grid-column: 2/ 6;
+  grid-row: 4 / -1;
+  /* background: silver; */
+  text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 .stacks {
-    grid-column: 6/8;
-    grid-row: 4 / -1;
-    /* background: springgreen; */
+  grid-column: 6/8;
+  grid-row: 4 / -1;
+  /* background: springgreen; */
 }
 .soft {
-    grid-column: 8/ 12;
-    grid-row: 4 / -1;
-    /* background: thistle; */
+  grid-column: 8/ 12;
+  grid-row: 4 / -1;
+  /* background: thistle; */
 }
-
 
 /* PROJECTS -------------------------------- */
 
 #projects {
-    height: 100vh;
-    width: 100vw;
-    color: white;
-    /* background-color: ; */
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  /* background-color: ; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
 }
