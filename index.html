@@ -4,115 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700&display=swap" rel="stylesheet" />
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Alanis Yates</title>
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./app.js"></script>
-
-    <div class="grid-container-1">
-      <div class="topnav header bold" id="myTopnav">
-        <a href="#">HOME</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">SKILLS</a>
-        <a href="#"><i class="fa fa-fw fa-github"></i></a>
-        <a href="#"><i class="fa fa-fw fa-linkedin"></i></a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <section class="main">
-        <!-- <div class="circle"></div>
-        <div class="circle2"></div> -->
-        <!-- <div class="circle2"></div> -->
-        <div class="main-content">
-          <h1 class="name bold">ALANIS YATES</h1>
-          <h2 class="med">FULL STACK DEVELOPER</h2>
-          <h2 class="med">
-            <button type="button" class="button">PROJECTS</button>
-            <button type="button" class="button">RESUME</button>
-          </h2>
-        </div>
-      </section>
-    </div>
-    <section id="skills">
-      <div class="blank"></div>
-      <div class="title">
-        <h1>SKILLS</h1>
-      </div>
-      <div class="tech">
-        <br />
-        <br />
-        <br />
-        <h1 class="title">TECHNICAL</h1>
-        <div class="category">
-          <h2>FRONT END</h2>
-          <p>
-            HTML5, CSS3(Sass, CSS Grid, and Flexbox), Bootstrap 4,
-            Javascript(ES6), Git, React, UnitTesting with Mocha.
-          </p>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class="category">
-          <h2>BACK END</h2>
-          <p>
-            Node.js, Express.js, Python, MongoDB, SQL, NoSQL, REST APIs.
-          </p>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class="category">
-          <h2>PROTOTYPING</h2>
-          <p>
-            Adobe Xd, Adobe InDesign, Photoshop, Lightroom, Figma, Sketch.
-          </p>
-        </div>
-        <br />
-        <br />
-        <br />
-        <div class="category">
-          <h2>OTHER APPLICATIONS</h2>
-          <p>
-            Matlab, Octave, Microsoft Office, G Suite, Premiere, Davinci
-            Resolve.
-          </p>
-        </div>
-      </div>
-      <div class="stacks">
-        <h2>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-          cumque, possimus consectetur similique iure cupiditate?
-        </h2>
-      </div>
-      <div class="soft">
-        <br />
-        <br />
-        <br />
-        <h1 class="title">SOFT</h1>
-        <p>
-          Public Speaking, Effective Communicator, Presenting, Adaptable,
-          Creative, Desire To Learn, Flexible, Resourceful, Detail Oriented,
-          Dedicated, Leader, Decision Making, Project Management, Confident,
-          Honest, Collaboration, Self-Starter.
-        </p>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="title">
-        <h1>PROJECTS</h1>
-      </div>
-    </section>
 
     <script src="node_modules/lax.js/lib/lax.min.js"></script>
     <script>
@@ -124,8 +23,81 @@
             lax.update(window.scrollY); // update every scroll
           },
           false
-        );
+        ); 
       };
     </script>
   </body>
 </html>
+
+<nav class="topnav header bold" id="myTopnav">
+    <a href="#">HOME</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#"><i class="fa fa-fw fa-github"></i></a>
+    <a href="#"><i class="fa fa-fw fa-linkedin"></i></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <!-- MAIN ------------------------------- -->
+
+  <section id="main">
+    <div class="circle"></div>
+    <div class="main-content">
+      <h1 class="name bold">ALANIS YATES</h1>
+      <h2 class="med">FULL STACK DEVELOPER</h2>
+      <h2 class="med">
+        <button type="button" class="button">PROJECTS</button>
+        <button type="button" class="button">RESUME</button>
+      </h2>
+    </div>
+  </section>
+
+  <!-- SKILLS ------------------------------------ -->
+  <section id="skills">
+    <div class="blank"></div>
+    <div class="tech">
+      <div class="category">
+        <h2>FRONT END</h2>
+        <h3>
+         HTML5	• CSS3	• Sass • CSS Grid	• CSS Flexbox • Bootstrap 4	•
+          Javascript(ES6) • Git	• React
+        </h3>
+      </div>
+      <div class="category">
+        <h2>BACK END</h2>
+        <h3>
+          Node.js	• Express.js • Python • MongoDB • SQL • NoSQL • REST APIs
+        </h3>
+      </div>
+      <div class="category">
+        <h2>PROTOTYPING</h2>
+        <h3>
+          Adobe Xd • Adobe InDesign • Photoshop • Lightroom • Figma • Sketch
+        </h3>
+      </div>
+      <div class="category">
+        <h2>OTHER APPLICATIONS</h2>
+        <h3>
+          Matlab • Octave • Microsoft Office • G Suite • Premiere • Davinci
+          Resolve
+        </h3>
+      </div>
+    </div>
+    <div class="stacks">
+      <h2>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+        cumque, possimus consectetur similique iure cupiditate?
+      </h2>
+    </div>
+  </section>
+  <!-- PROJECTS --------------------------------  -->
+  <section class="flex" id="projects">
+    <div class="title">
+      <h1>PROJECTS</h1>
+      </div>
+    </div>
+  </section>
+</div>
+</div>

@@ -2,13 +2,33 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserratt", sans-serif;
 }
 
 body {
   background: #111d5e;
+  background: #00530b;
+  font-family: "Montserratt", sans-serif;
+  color: #fff;
+  height: 100vh;
+  /* line-height: 1.6; */
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
 }
 
+section {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* CSS Smooth Scroll */
+}
 
 .bold {
   font-weight: 700;
@@ -19,49 +39,17 @@ body {
 .med {
   font-weight: 500;
 }
-
 .fade {
   opacity: 0.5;
 }
 
-.button {
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 0.2em;
-  padding: 0.35em 0.7em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.6em;
-  margin: 0.9em 0.3em;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.button:hover {
-  background-color: rgba(255, 189, 105, 0.87);
-  color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
-}
-.grid-container-1 {
-  /* width: 100%; */
-  height: 100vh;
-  /* background: wheat; */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-}
-.header {
-  grid-column: 1 / -1;
-  grid-row: 1 / 1;
-}
-
-.topnav {
-  /* background: burlywood; */
+/* nav ------------------------------------------------------ */
+nav {
   position: fixed;
-  overflow: hidden;
-  text-align: right;
+}
+.topnav {
+  float: right;
+  margin-left: auto;
 }
 
 .topnav a {
@@ -71,7 +59,7 @@ body {
   text-align: center;
   padding: 14px 1em;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.5vw;
   transition: all 0.2s;
 }
 
@@ -86,53 +74,6 @@ body {
 .topnav .icon {
   display: none;
 }
-
-.circle {
-  display: block;
-  position: absolute;
-  background: #ffbd69;
-  border-radius: 50%;
-  height: 900px;
-  width: 900px;
-  margin: 0;
-  transform: translate(-800px, 60vh);
-  /* overflow-x: hidden; */
-  z-index: -1;
-}
-.circle2 {
-  display: block;
-  position: absolute;
-  background: #7e7972;
-  border-radius: 50%;
-  height: 900px;
-  width: 900px;
-  margin: 0;
-  transform: translate(, -40vh);
-  overflow-x: hidden;
-  z-index: -1;
-}
-
-.main {
-  grid-column: 2 / 12;
-  grid-row: 2 / -1;
-  display: grid;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.main-content {
-  color: white;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
-}
-.main-content h1 {
-  font-size: 7vw;
-}
-.main-content h2 {
-  font-size: 1.9vw;
-}
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(first-child) {
@@ -161,6 +102,80 @@ body {
   }
 }
 
+/* MAIN -------------------------------------------------------------- */
+.main-content {
+  /* background: #ffbd69; */
+  grid-column: 2/ 12;
+  grid-row: 6 / -1;
+  /* display: grid; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
+}
+.main-content h1 {
+  font-size: 7vw;
+}
+.main-content h2 {
+  font-size: 1.9vw;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.2em;
+  padding: 0.35em 0.7em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.6em;
+  margin: 0.9em 0.3em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: rgba(255, 189, 105, 0.87);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
+}
+
+.circle {
+  display: block;
+  position: absolute;
+  background: #ffbd69;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  margin: 0;
+  transform: translate(-60%, 70%);
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.circle-2 {
+  display: block;
+  position: absolute;
+  background: #00eef7;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  margin: 0;
+  transform: translate(220%, -60%);
+  overflow-x: hidden;
+  z-index: -1;
+}
+
 /* skills ------------------------------------------------- */
 
 #skills {
@@ -168,56 +183,100 @@ body {
   height: 100vh;
   width: 100vw;
   color: white;
-  /* background-color: ; */
-  /* overflow: hidden; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
 
-.blank {
-  grid-column: 1 / -1;
-  grid-row: 1 / 1;
-}
 
 .title {
   grid-column: 5 / 9;
   grid-row: 3 / 4;
-  /* background: salmon; */
   top: 400px;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-size: 3vw;
+  padding-bottom: 15px;
 }
 
 .tech {
-  grid-column: 2/ 6;
-  grid-row: 4 / -1;
-  /* background: silver; */
+  grid-column: 2/ 5;
+  grid-row: 4 / 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  padding: 15px 0;
+}
+
+.category h3 {
+  font-style: italic;
+  font-size: 1.8em;
+  font-weight: 300;
   text-align: left;
-  justify-content: center;
-  align-items: center;
+  padding: 5px 0;
+}
+.tech h2 {
+  text-align: left;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.6em;
 }
 .stacks {
-  grid-column: 6/8;
-  grid-row: 4 / -1;
-  /* background: springgreen; */
-}
-.soft {
-  grid-column: 8/ 12;
-  grid-row: 4 / -1;
-  /* background: thistle; */
+  grid-column: 6/-1;
+  grid-row: 5 / 10;
+  background: springgreen;
 }
 
 /* PROJECTS -------------------------------- */
 
 #projects {
-  height: 100vh;
-  width: 100vw;
-  color: white;
-  /* background-color: ; */
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  /* background: brown; */
+}
+
+.row{
+  grid-column: 1 / -1;
+  grid-row: 4 / -1;
+  /* background: chartreuse; */
+  padding: 0 15%;
+}
+
+/* Float four columns side by side */
+.column {
+  padding: 0;
+  float: left;
+  width: 25%;
+  /* padding: 10px; */
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  /* padding: 16px; */
+  text-align: center;
+  /* background-color: #f1f1f1; */
+  cursor: pointer;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
