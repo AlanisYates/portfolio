@@ -5,14 +5,12 @@
 }
 
 body {
-  background: #111d5e;
-  background: #00530b;
+  background: #455ab9;
   font-family: "Montserratt", sans-serif;
   color: #fff;
   height: 100vh;
   /* line-height: 1.6; */
-  overflow-y: scroll;
-  /* overflow-x: hidden; */
+overflow-x: hidden;
 }
 
 section {
@@ -21,7 +19,7 @@ section {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -43,10 +41,31 @@ section {
   opacity: 0.5;
 }
 
+.fade-in {
+  animation: fadeInAnimation ease-in-out 1s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* nav ------------------------------------------------------ */
 nav {
+  /* background: #000000b9; */
+  width: 100%;
+  transition: opacity 0.25s;
   position: fixed;
 }
+
+.navbar-fixed {
+  opacity: 1;
+}
+
 .topnav {
   float: right;
   margin-left: auto;
@@ -55,7 +74,7 @@ nav {
 .topnav a {
   float: left;
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 1em;
   text-decoration: none;
@@ -64,7 +83,7 @@ nav {
 }
 
 .topnav a:hover {
-  color: rgba(255, 189, 105, 0.87);
+  color: rgba(11, 12, 56, 0.87);
 }
 
 .topnav a.active {
@@ -106,7 +125,7 @@ nav {
 .main-content {
   /* background: #ffbd69; */
   grid-column: 2/ 12;
-  grid-row: 6 / -1;
+  grid-row: 6 / 6;
   /* display: grid; */
   text-align: center;
   justify-content: center;
@@ -114,14 +133,14 @@ nav {
 }
 
 .main-content {
-  color: white;
+  color: linear-gradient(135deg, #667eea 25%, #ffbd69 100%);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
 }
 .main-content h1 {
-  font-size: 7vw;
+  font-size: 8vw;
 }
 .main-content h2 {
-  font-size: 1.9vw;
+  font-size: 3vw;
 }
 
 .button {
@@ -140,7 +159,7 @@ nav {
 }
 
 .button:hover {
-  background-color: rgba(255, 189, 105, 0.87);
+  background-color: rgba(11, 12, 56, 0.87);
   color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
 }
@@ -158,9 +177,12 @@ nav {
   height: 900px;
   width: 900px;
   margin: 0;
-  transform: translate(-60%, 70%);
-  overflow-x: hidden;
+  top: 80vh;
   z-index: -1;
+  opacity: 0;
+  animation: slideIn ease-in-out 1s;
+  animation-delay: 350ms;
+  animation-fill-mode: forwards;
 }
 
 .circle-2 {
@@ -170,16 +192,61 @@ nav {
   border-radius: 50%;
   height: 900px;
   width: 900px;
+  opacity: 0;
   margin: 0;
-  transform: translate(220%, -60%);
-  overflow-x: hidden;
   z-index: -1;
+  animation: slideInRight ease-in-out 1.05s;
+  animation-delay: 120ms;
+  animation-fill-mode: forwards;
+}
+
+.animation {
+position: absolute;
+z-index: -1;
+
+}
+
+.circle-3 {
+  display: block;
+  position: absolute;
+  background: #0e4612;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  margin: 0;
+  top: 20vh;
+  left: 40vw;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -1000px;
+    opacity: 0;
+  }
+  100% {
+    top: 70vh;
+    left: -10vw;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    right: -93vw;
+    opacity: 0;
+  }
+  100% {
+    right: -23vw;
+    top: -40vh;
+    opacity: 1;
+  }
 }
 
 /* skills ------------------------------------------------- */
 
 #skills {
-  background: #111d5e;
+  /* background: #111d5e; */
   height: 100vh;
   width: 100vw;
   color: white;
@@ -187,7 +254,6 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
-
 
 .title {
   grid-column: 5 / 9;
@@ -201,7 +267,7 @@ nav {
 }
 
 .tech {
-  grid-column: 2/ 5;
+  grid-column: 8/ 12;
   grid-row: 4 / 10;
   display: flex;
   flex-direction: column;
@@ -209,25 +275,39 @@ nav {
 
 .category {
   padding: 15px 0;
+  font-size: 1vw;
 }
 
 .category h3 {
   font-style: italic;
-  font-size: 1.8em;
   font-weight: 300;
   text-align: left;
   padding: 5px 0;
 }
 .tech h2 {
   text-align: left;
-  font-size: 2em;
   font-weight: 700;
   line-height: 1.6em;
 }
 .stacks {
-  grid-column: 6/-1;
+  grid-column: 2 / 8;
   grid-row: 5 / 10;
-  background: springgreen;
+  /* background: springgreen; */
+}
+
+.icon-row {
+  grid-column: 1 / -1;
+  grid-row: 4 / -1;
+  /* background: chartreuse; */
+  padding: 20px 15%;
+}
+
+/* Float four columns side by side */
+.icon-column {
+  padding: 10px;
+  float: left;
+  width: 25%;
+  /* padding: 10px; */
 }
 
 /* PROJECTS -------------------------------- */
@@ -236,19 +316,21 @@ nav {
   /* background: brown; */
 }
 
-.row{
+.row {
   grid-column: 1 / -1;
   grid-row: 4 / -1;
   /* background: chartreuse; */
-  padding: 0 15%;
+  padding: 0px 15%;
+  margin: 0 -5px;
+
 }
 
 /* Float four columns side by side */
 .column {
   padding: 0;
   float: left;
-  width: 25%;
-  /* padding: 10px; */
+  width: 100%;
+  display: flex;
 }
 
 .responsive {
@@ -266,9 +348,9 @@ nav {
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  /* padding: 16px; */
+  padding: 50px 100px;
   text-align: center;
-  /* background-color: #f1f1f1; */
+  background-color: #f1f1f1;
   cursor: pointer;
 }
 

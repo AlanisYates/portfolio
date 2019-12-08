@@ -30,9 +30,9 @@
     <!-- MAIN ------------------------------- -->
 
     <section id="main">
-        <div class="circle"></div>
-        <div class="circle-2"></div>
-      <div class="main-content">
+      <div class="circle"></div>
+      <div class="circle-2"></div>
+      <div class="main-content fade-in">
         <h1 class="name bold">ALANIS YATES</h1>
         <h2 class="med">FULL STACK DEVELOPER</h2>
         <h2 class="med">
@@ -43,7 +43,9 @@
     </section>
 
     <!-- SKILLS ------------------------------------ -->
-
+    <div class="animation">
+        <div class="circle-3"></div>
+    </div>
     <section id="skills">
       <div class="tech">
         <div class="category">
@@ -74,10 +76,26 @@
         </div>
       </div>
       <div class="stacks">
-        <h2>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-          cumque, possimus consectetur similique iure cupiditate?
-        </h2>
+        <div class="icon-row">
+          <div class="icon-column">
+            <img class="responsive" src="./img/css-3.png" />
+          </div>
+          <div class="icon-column">
+            <img class="responsive" src="./img/icon.png" />
+          </div>
+          <div class="icon-column">
+            <img class="responsive" src="./img/javascript-736400_1280.png" />
+          </div>
+          <div class="icon-column">
+            <img class="responsive" src="./img/git-logo.png" />
+          </div>
+          <div class="icon-column">
+            <img class="responsive" src="./img/react.png" />
+          </div>
+          <div class="icon-column">
+            <img class="responsive" src="./img/sql-file-format-symbol.png" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -96,26 +114,48 @@
               alt=""
             />
           </div>
+          <div class="card">
+            <img
+              class="responsive"
+              src="./img/Headshot_20170819_David-Braught_Richard_Waine_Lancaster_PA_0090-(square+-+500+px+-+72+ppi+-+low+res).jpg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              class="responsive"
+              src="./img/Headshot_20170819_David-Braught_Richard_Waine_Lancaster_PA_0090-(square+-+500+px+-+72+ppi+-+low+res).jpg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              class="responsive"
+              src="./img/Headshot_20170819_David-Braught_Richard_Waine_Lancaster_PA_0090-(square+-+500+px+-+72+ppi+-+low+res).jpg"
+              alt=""
+            />
+          </div>
+          <div class="card">
+            <img
+              class="responsive"
+              src="./img/Headshot_20170819_David-Braught_Richard_Waine_Lancaster_PA_0090-(square+-+500+px+-+72+ppi+-+low+res).jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- scripts --------------------------------  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./app.js"></script>
-    <script src="node_modules/lax.js/lib/lax.min.js"></script>
-    <script>
-      window.onload = function() {
-        lax.setup(); // init
-        document.addEventListener(
-          "scroll",
-          function(e) {
-            lax.update(window.scrollY); // update every scroll
-          },
-          false
-        );
-      };
-    </script>
   </body>
 </html>
