@@ -4,87 +4,219 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700&display=swap" rel="stylesheet" />
-    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Alanis Yates</title>
   </head>
   <body>
+    <!-- Nav --------------------------------  -->
+    <nav class="topnav header bold" id="myTopnav">
+      <a href="#">HOME</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#"><i class="fa fa-fw fa-github"></i></a>
+      <a href="#"><i class="fa fa-fw fa-linkedin"></i></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+
+    <!-- Main Page --------------------------------  -->
+    <section id="main">
+      <div class="circle"></div>
+      <div class="circle-2"></div>
+      <div class="main-content fade-in">
+        <h1 class="name bold">ALANIS YATES</h1>
+        <h2 class="med">FULL STACK DEVELOPER</h2>
+        <h2 class="med">
+          <button type="button" class="button">PROJECTS</button>
+          <button type="button" class="button">RESUME</button>
+        </h2>
+      </div>
+    </section>
+
+    <!-- Skills --------------------------------  -->
+
+    <div class="animation">
+      <div class="circle-3"></div>
+    </div>
+    <section id="skills">
+      <div class="tech">
+        <div class="category">
+          <h2>FRONT END</h2>
+          <h3>
+            HTML5 • CSS3 • Sass • CSS Grid • CSS Flexbox • Bootstrap 4 •
+            Javascript(ES6) • Git • React
+          </h3>
+        </div>
+        <div class="category">
+          <h2>BACK END</h2>
+          <h3>
+            Node.js • Express.js • Python • MongoDB • SQL • NoSQL • REST APIs
+          </h3>
+        </div>
+        <div class="category">
+          <h2>PROTOTYPING</h2>
+          <h3>
+            Adobe Xd • Adobe InDesign • Photoshop • Lightroom • Figma • Sketch
+          </h3>
+        </div>
+        <div class="category">
+          <h2>OTHER APPLICATIONS</h2>
+          <h3>
+            Matlab • Octave • Microsoft Office • G Suite • Premiere • Davinci
+            Resolve
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects --------------------------------  -->
+    <h1 id="projects" class="title">PROJECTS</h1>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+
+    <!-- <div class="circle4"></div> -->
+    <main>
+      <section class="cards">
+        <!-- Project 1 ------------------------------------------ -->
+
+        <div class="card">
+          <div class="card__image-container">
+            <img
+              src="./img/kevin-bhagat-zNRITe8NPqY-unsplash.jpg"
+              alt="portfolio-image"
+            />
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">
+              Spot-On
+            </h1>
+            <div class="card__info">
+              <p class="text--medium">
+                A Spotoify Webb appliction that allows the user to easily and
+                quickly create a new playlist and search for a song.
+              </p>
+            </div>
+            <hr class="thick" />
+            <div class="stack">
+              <li class="bold">React.js</li>
+              <li>|</li>
+              <li class="bold">HTML</li>
+              <li>|</li>
+              <li class="bold">CSS</li>
+              <li>|</li>
+              <li class="bold">Bootstrap</li>
+            </div>
+            <div class="card-btn">
+              <button type="button" class="btn text--medium">
+                Demo
+              </button>
+              <button type="button" class="btn text--medium">
+                Code
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 ------------------------------------------ -->
+
+        <div class="card">
+          <div class="card__image-container">
+            <img
+              src="./img/kevin-bhagat-zNRITe8NPqY-unsplash.jpg"
+              alt="portfolio-image"
+            />
+          </div>
+          <div class="card__content">
+            <h1 class="card__title">
+              Spot-On
+            </h1>
+            <div class="card__info">
+              <p class="text--medium">
+                A Spotoify Webb appliction that allows the user to easily and
+                quickly create a new playlist and search for a song.
+              </p>
+            </div>
+            <hr class="thick" />
+            <div class="stack">
+              <li class="bold">React.js</li>
+              <li>|</li>
+              <li class="bold">HTML</li>
+              <li>|</li>
+              <li class="bold">CSS</li>
+              <li>|</li>
+              <li class="bold">Bootstrap</li>
+            </div>
+            <div class="card-btn">
+              <button type="button" class="btn text--medium">
+                Demo
+              </button>
+              <button type="button" class="btn text--medium">
+                Code
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 ------------------------------------------ -->
+
+        <div class="card">
+            <div class="card__image-container">
+              <img
+                src="./img/kevin-bhagat-zNRITe8NPqY-unsplash.jpg"
+                alt="portfolio-image"
+              />
+            </div>
+            <div class="card__content">
+              <h1 class="card__title">
+                Spot-On
+              </h1>
+              <div class="card__info">
+                <p class="text--medium">
+                  A Spotoify Webb appliction that allows the user to easily and
+                  quickly create a new playlist and search for a song.
+                </p>
+              </div>
+              <hr class="thick" />
+              <div class="stack">
+                <li class="bold">React.js</li>
+                <li>|</li>
+                <li class="bold">HTML</li>
+                <li>|</li>
+                <li class="bold">CSS</li>
+                <li>|</li>
+                <li class="bold">Bootstrap</li>
+              </div>
+              <div class="card-btn">
+                <button type="button" class="btn text--medium">
+                  Demo
+                </button>
+                <button type="button" class="btn text--medium">
+                  Code
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 ------------------------------------------ -->
+      </section>
+    </main>
+
+    <!-- scripts --------------------------------  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="./app.js"></script>
-
   </body>
 </html>
-
-<nav class="topnav header bold" id="myTopnav">
-    <a href="#">HOME</a>
-    <a href="#skills">SKILLS</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#"><i class="fa fa-fw fa-github"></i></a>
-    <a href="#"><i class="fa fa-fw fa-linkedin"></i></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </nav>
-
-  <!-- MAIN ------------------------------- -->
-
-  <section id="main">
-    <div class="circle"></div>
-    <div class="main-content">
-      <h1 class="name bold">ALANIS YATES</h1>
-      <h2 class="med">FULL STACK DEVELOPER</h2>
-      <h2 class="med">
-        <button type="button" class="button">PROJECTS</button>
-        <button type="button" class="button">RESUME</button>
-      </h2>
-    </div>
-  </section>
-
-  <!-- SKILLS ------------------------------------ -->
-  <section id="skills">
-    <div class="blank"></div>
-    <div class="tech">
-      <div class="category">
-        <h2>FRONT END</h2>
-        <h3>
-         HTML5	• CSS3	• Sass • CSS Grid	• CSS Flexbox • Bootstrap 4	•
-          Javascript(ES6) • Git	• React
-        </h3>
-      </div>
-      <div class="category">
-        <h2>BACK END</h2>
-        <h3>
-          Node.js	• Express.js • Python • MongoDB • SQL • NoSQL • REST APIs
-        </h3>
-      </div>
-      <div class="category">
-        <h2>PROTOTYPING</h2>
-        <h3>
-          Adobe Xd • Adobe InDesign • Photoshop • Lightroom • Figma • Sketch
-        </h3>
-      </div>
-      <div class="category">
-        <h2>OTHER APPLICATIONS</h2>
-        <h3>
-          Matlab • Octave • Microsoft Office • G Suite • Premiere • Davinci
-          Resolve
-        </h3>
-      </div>
-    </div>
-    <div class="stacks">
-      <h2>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-        cumque, possimus consectetur similique iure cupiditate?
-      </h2>
-    </div>
-  </section>
-  <!-- PROJECTS --------------------------------  -->
-  <section class="flex" id="projects">
-    <div class="title">
-      <h1>PROJECTS</h1>
-      </div>
-    </div>
-  </section>
-</div>
-</div>

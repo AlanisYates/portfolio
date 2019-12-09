@@ -8,9 +8,7 @@ body {
   background: #455ab9;
   font-family: "Montserratt", sans-serif;
   color: #fff;
-  height: 100vh;
-  /* line-height: 1.6; */
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 section {
@@ -56,10 +54,7 @@ section {
 
 /* nav ------------------------------------------------------ */
 nav {
-  /* background: #000000b9; */
-  width: 100%;
-  transition: opacity 0.25s;
-  position: fixed;
+  position: absolute;
 }
 
 .navbar-fixed {
@@ -123,19 +118,12 @@ nav {
 
 /* MAIN -------------------------------------------------------------- */
 .main-content {
-  /* background: #ffbd69; */
   grid-column: 2/ 12;
   grid-row: 6 / 6;
-  /* display: grid; */
   text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-content {
-  color: linear-gradient(135deg, #667eea 25%, #ffbd69 100%);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.23);
 }
+
 .main-content h1 {
   font-size: 8vw;
 }
@@ -165,7 +153,7 @@ nav {
 }
 
 .header {
-  grid-column: 1 / -1;
+  grid-column: 5 / -1;
   grid-row: 1 / 1;
 }
 
@@ -201,9 +189,8 @@ nav {
 }
 
 .animation {
-position: absolute;
-z-index: -1;
-
+  position: absolute;
+  z-index: -1;
 }
 
 .circle-3 {
@@ -255,22 +242,17 @@ z-index: -1;
   grid-template-rows: repeat(12, 1fr);
 }
 
-.title {
-  grid-column: 5 / 9;
-  grid-row: 3 / 4;
-  top: 400px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 3vw;
-  padding-bottom: 15px;
-}
-
 .tech {
   grid-column: 8/ 12;
   grid-row: 4 / 10;
   display: flex;
   flex-direction: column;
+}
+
+.tech h2 {
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.6em;
 }
 
 .category {
@@ -284,81 +266,193 @@ z-index: -1;
   text-align: left;
   padding: 5px 0;
 }
-.tech h2 {
-  text-align: left;
-  font-weight: 700;
-  line-height: 1.6em;
-}
-.stacks {
-  grid-column: 2 / 8;
-  grid-row: 5 / 10;
-  /* background: springgreen; */
-}
 
-.icon-row {
-  grid-column: 1 / -1;
-  grid-row: 4 / -1;
-  /* background: chartreuse; */
-  padding: 20px 15%;
-}
+/* projects ------------------------------------------------- */
 
-/* Float four columns side by side */
-.icon-column {
-  padding: 10px;
-  float: left;
-  width: 25%;
-  /* padding: 10px; */
-}
-
-/* PROJECTS -------------------------------- */
-
-#projects {
-  /* background: brown; */
-}
-
-.row {
-  grid-column: 1 / -1;
-  grid-row: 4 / -1;
-  /* background: chartreuse; */
-  padding: 0px 15%;
-  margin: 0 -5px;
-
-}
-
-/* Float four columns side by side */
-.column {
-  padding: 0;
-  float: left;
-  width: 100%;
-  display: flex;
-}
-
-.responsive {
-  width: 100%;
-  height: auto;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 50px 100px;
+.title {
+  grid-column: 5 / 9;
+  grid-row: 3 / 4;
+  top: 400px;
   text-align: center;
-  background-color: #f1f1f1;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  padding: 15px 0px;
+  text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.23);
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 50px)) 1fr;
+  grid-gap: 60px;
+  padding: 60px 0px;
+}
+
+.text--medium {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.cards {
+  /* background: #2020208f; */
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+  padding: 20px 50px;
+  border-radius: 10px;
+  /* overflow-y: scroll; */
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+
+.card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background: #39393ba1;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px 15px;
+ 
+  transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+  box-shadow: 0px 10px 17px #00000042;
+  transform: translateY(-7px);
+}
+
+.card__image-container {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__content {
+  padding: 15px 15px;
+}
+
+.card__title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  align-items: center;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.thick {
+  border: 1.5px solid;
+  margin: 15px;
+}
+
+.stack {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stack li {
+  font-size: 17px;
+  list-style-type: none;
+}
+
+.card-btn {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 25px;
+  margin: 4px;
+  border: 1px solid;
+  padding: 15px 40px;
+  background: none;
+  border-radius: 7px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+  background: #07855465;
+}
+
+.circle4 {
+  /* display: block; */
+  position: absolute;
+  background: #00eef7;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  left: -25%;
+  opacity: 1;
+  margin: 0;
+  z-index: -1;
+}
+
+.circle5 {
+  /* display: block; */
+  position: absolute;
+  background: #46f700;
+  border-radius: 50%;
+  height: 900px;
+  width: 900px;
+  left: 89%;
+  opacity: 1;
+  margin: 0;
+  z-index: -1;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    background: chartreuse;
+    grid-column-end: span 6;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px;
+  }
+
+  .cards {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 6;
   }
 }

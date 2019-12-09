@@ -18,7 +18,7 @@ const flightPath = {
   autoRotate: true,
   values: [
     { x: 100, y: -600 },
-    {x: window.innerWidth, y: 0},
+    { x: window.innerWidth, y: 0 }
   ]
 };
 
